@@ -1,7 +1,6 @@
-# Data Product Definitions template
+# Jyväskylä Data Product Definitions
 
-This repository contains a minimal set of resources that are necessary to get started
-with defining your own Data Product Definitions.
+This repository contains Data Product Definitions for the Jyväskylä nexus.
 
 # Repo structure
 
@@ -9,11 +8,6 @@ with defining your own Data Product Definitions.
 - [./DataProducts](./DataProducts) - Final Definitions as OpenAPI 3.0 specs
 - [.github/workflows](.github/workflows) - Pre-configured CI workflows for validating
   and converting definitions from sources
-
-# Getting started
-
-Press `Use template` to create a new repo from this template and define your data
-products there.
 
 ## Adding new Data Product Definition
 
