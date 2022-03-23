@@ -98,7 +98,7 @@
       },
       "LockAssignmentExistsRequest": {
         "title": "LockAssignmentExistsRequest",
-        "required": ["keyId", "lockId"],
+        "required": ["keyId", "lockId", "sharedSecret"],
         "type": "object",
         "properties": {
           "keyId": {
@@ -115,6 +115,11 @@
             "type": "string",
             "description": "Vendor specific ID for a lock",
             "example": "12345678"
+          },
+          "sharedSecret": {
+            "title": "Shared Secret",
+            "type": "string",
+            "description": "Shared secret between the productizer and the system using it"
           }
         }
       },

@@ -2,7 +2,7 @@ from converter import CamelCaseModel, DataProductDefinition
 from pydantic import Field
 
 
-class CreateAssignment(CamelCaseModel):
+class CreateAssignmentResponse(CamelCaseModel):
     key_id: str = Field(
         ...,
         title="Key ID",
@@ -20,10 +20,18 @@ class CreateAssignment(CamelCaseModel):
     )
 
 
+class CreateAssignmentRequest(CreateAssignmentResponse):
+    shared_secret: str = Field(
+        ...,
+        title="Shared Secret",
+        description="Shared secret between the productizer and the system using it",
+    )
+
+
 DEFINITION = DataProductDefinition(
     description="Create key assignment",
-    request=CreateAssignment,
-    response=CreateAssignment,
+    request=CreateAssignmentRequest,
+    response=CreateAssignmentResponse,
     route_description="Create assignment",
     summary="Create key assignment",
 )
