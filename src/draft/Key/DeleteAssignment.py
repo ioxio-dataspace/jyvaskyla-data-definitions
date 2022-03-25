@@ -2,7 +2,7 @@ from converter import CamelCaseModel, DataProductDefinition
 from pydantic import Field
 
 
-class DeleteAssignment(CamelCaseModel):
+class DeleteAssignmentResponse(CamelCaseModel):
     key_id: str = Field(
         ...,
         title="Key ID",
@@ -20,10 +20,18 @@ class DeleteAssignment(CamelCaseModel):
     )
 
 
+class DeleteAssignmentRequest(DeleteAssignmentResponse):
+    shared_secret: str = Field(
+        ...,
+        title="Shared Secret",
+        description="Shared secret between the productizer and the system using it",
+    )
+
+
 DEFINITION = DataProductDefinition(
     description="Delete key assignment",
-    request=DeleteAssignment,
-    response=DeleteAssignment,
+    request=DeleteAssignmentRequest,
+    response=DeleteAssignmentResponse,
     route_description="Delete assignment",
     summary="Delete key assignment",
 )

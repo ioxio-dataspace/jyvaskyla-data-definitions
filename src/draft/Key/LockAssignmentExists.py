@@ -18,6 +18,11 @@ class LockAssignmentExistsRequest(CamelCaseModel):
         example="12345678",
         min_length=1,
     )
+    shared_secret: str = Field(
+        ...,
+        title="Shared Secret",
+        description="Shared secret between the productizer and the system using it",
+    )
 
 
 class LockAssignmentExistsResponse(CamelCaseModel):
