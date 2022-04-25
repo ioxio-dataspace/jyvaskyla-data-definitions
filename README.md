@@ -1,6 +1,6 @@
 # Jyväskylä Data Product Definitions
 
-This repository contains Data Product Definitions for the Jyväskylä nexus.
+This repository contains Data Product Definitions for the Jyväskylä dataspace.
 
 # Repo structure
 
