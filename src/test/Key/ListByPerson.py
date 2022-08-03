@@ -32,6 +32,5 @@ DEFINITION = DataProductDefinition(
     description="List keys by person",
     request=ListKeysByPersonRequest,
     response=KeyListResponse,
-    route_description="List keys for a person",
     summary="List keys for a person",
 )
